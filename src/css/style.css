@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Wood-Block';
+    src: url(../fonts/Wood-Block-CG.otf);
+}
+
+body {
+    font-family: "Lexend", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: linear-gradient(-233deg, #000000c4 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .pagina-personagem {
+    display: none;
+    height: 100vh;
+    object-fit: cover;
+}
+
+main .pagina-personagem.selecionado {
+    display: block;
+}
+
+main .pagina-personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 90% 100%; */
+    
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 460px;
+    z-index: 1;
+}
+
+.conteudo .logo {
+    background: url("../img/invincible-logo.png") no-repeat;
+    background-size: contain;
+    height: 95px;
+    width: 290px;
+    margin-bottom: 35px;
+}
+
+.conteudo .nome-personagem {
+    font-family: 'Wood-Block';
+    font-size: 120px;
+    margin-bottom: 20px;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+}
+
+.conteudo p {
+    color: var(--branco);
+    line-height: 22px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 175px;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.botoes .personagem {
+    border: none;
+    background: none;
+    cursor: pointer;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50%;
+    max-width: 100px;
+    transition: ease-in-out 0.15s;
+}
+
+.botoes .personagem img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.botoes .personagem.ativo {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--amarelo);
+}
+
+.botoes .personagem:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px var(--branco);
+}
+
+#page-mark .conteudo .nome-personagem{
+    background: -webkit-linear-gradient(var(--amarelo), var(--amarelo), var(--azul));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#page-eve .conteudo .nome-personagem{
+    background: -webkit-linear-gradient(var(--rosa-claro), var(--rosa));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#page-omniman .conteudo .nome-personagem{
+    background: -webkit-linear-gradient(var(--branco), var(--vermelho));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#page-allen .conteudo .nome-personagem{
+    background: -webkit-linear-gradient(var(--vermelho-claro), var(--laranja));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#page-cecil .conteudo .nome-personagem{
+    background: -webkit-linear-gradient(var(--branco), var(--cinza), var(--vermelho-escuro));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
